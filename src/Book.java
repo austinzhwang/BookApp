@@ -59,7 +59,18 @@ public class Book {
         isInStock = inStock;
     }
 
-    public void getDisplayText() {
-        System.out.println("Author: " + getAuthor() + " | Title: " + getTitle() + " | Description: " + getDesc());
+    // Returns the price of the number of books requested if the books are in stock
+    // Otherwise return 0
+    public double getPrice (int numBooks) {
+        final double BOOK_PRICE = 5;
+        if (isInStock()) {
+            return BOOK_PRICE * numBooks;
+        }
+        return 0;
+    }
+
+    // Enhance the Book Class
+    public String getDisplayText() {
+        return "Author: " + getAuthor() + " | Title: " + getTitle() + " | Description: " + getDesc();
     }
 }

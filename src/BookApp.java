@@ -6,6 +6,6 @@ public class BookApp {
         b1.setAuthor("J.K. Rowling");
         b1.setTitle("Harry Potter");
         b1.setDesc("Fiction book about wizards and witches");
-        b1.getDisplayText();
+        System.out.println(b1.getDisplayText());
     }
 }
